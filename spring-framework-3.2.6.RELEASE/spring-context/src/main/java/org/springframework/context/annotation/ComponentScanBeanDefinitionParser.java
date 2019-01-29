@@ -98,7 +98,7 @@ public class ComponentScanBeanDefinitionParser implements BeanDefinitionParser {
 		}
 
 		// Delegate bean definition registration to scanner class.
-		//配置扫描策略
+		//配置扫描策略，把component注解以及子类接口添加到include-filter中
 		ClassPathBeanDefinitionScanner scanner = createScanner(readerContext, useDefaultFilters);
 		scanner.setResourceLoader(readerContext.getResourceLoader());
 		scanner.setEnvironment(parserContext.getDelegate().getEnvironment());
