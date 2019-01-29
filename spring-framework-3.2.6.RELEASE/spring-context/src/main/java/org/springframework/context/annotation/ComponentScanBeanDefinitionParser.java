@@ -74,14 +74,16 @@ public class ComponentScanBeanDefinitionParser implements BeanDefinitionParser {
 
 	private static final String FILTER_EXPRESSION_ATTRIBUTE = "expression";
 
-
+	//xml 形式 component-scan 扫描class下面注解component注解以及子注解的Bean，注册到register中
 	public BeanDefinition parse(Element element, ParserContext parserContext) {
 		String[] basePackages = StringUtils.tokenizeToStringArray(element.getAttribute(BASE_PACKAGE_ATTRIBUTE),
 				ConfigurableApplicationContext.CONFIG_LOCATION_DELIMITERS);
 
 		// Actually scan for bean definitions and register them.
 		ClassPathBeanDefinitionScanner scanner = configureScanner(parserContext, element);
+		//获取beanDefinitions
 		Set<BeanDefinitionHolder> beanDefinitions = scanner.doScan(basePackages);
+		//注册其他注解解析器
 		registerComponents(parserContext.getReaderContext(), beanDefinitions, element);
 
 		return null;
@@ -96,6 +98,7 @@ public class ComponentScanBeanDefinitionParser implements BeanDefinitionParser {
 		}
 
 		// Delegate bean definition registration to scanner class.
+		//配置扫描策略
 		ClassPathBeanDefinitionScanner scanner = createScanner(readerContext, useDefaultFilters);
 		scanner.setResourceLoader(readerContext.getResourceLoader());
 		scanner.setEnvironment(parserContext.getDelegate().getEnvironment());
@@ -144,6 +147,7 @@ public class ComponentScanBeanDefinitionParser implements BeanDefinitionParser {
 		if (element.hasAttribute(ANNOTATION_CONFIG_ATTRIBUTE)) {
 			annotationConfig = Boolean.valueOf(element.getAttribute(ANNOTATION_CONFIG_ATTRIBUTE));
 		}
+		//默认配置annotation-config为true，Configuration、Autowired、Required..等注解注入InstantiationAwareBeanPostProcessor接口子类解析注解Bean注册到BeanFactory中
 		if (annotationConfig) {
 			Set<BeanDefinitionHolder> processorDefinitions =
 					AnnotationConfigUtils.registerAnnotationConfigProcessors(readerContext.getRegistry(), source);
