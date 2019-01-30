@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/demo-annotation/demo-annotation.iml" filepath="$PROJECT_DIR$/demo-annotation/demo-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/registerbean-ImportBeanDefinitionRegistrar/registerbean-ImportBeanDefinitionRegistrar.iml" filepath="$PROJECT_DIR$/registerbean-ImportBeanDefinitionRegistrar/registerbean-ImportBeanDefinitionRegistrar.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springSrcAnalyze.iml" filepath="$PROJECT_DIR$/.idea/springSrcAnalyze.iml" />
     </modules>
   </component>

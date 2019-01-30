@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo-annotation" />
+        <module name="registerbean-ImportBeanDefinitionRegistrar" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo-annotation" target="1.8" />
+      <module name="registerbean-ImportBeanDefinitionRegistrar" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
