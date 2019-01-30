@@ -178,7 +178,7 @@ public class AnnotationConfigUtils {
 			BeanDefinitionRegistry registry, Object source) {
 
 		Set<BeanDefinitionHolder> beanDefs = new LinkedHashSet<BeanDefinitionHolder>(4);
-		//BeanFactoryPostProcessor的实现，注册@configuration、@PropertySource类型解析器
+		//BeanFactoryPostProcessor的实现，注册@configuration、@PropertySource、@ComponentScan、@ImportResource类型解析器
 		if (!registry.containsBeanDefinition(CONFIGURATION_ANNOTATION_PROCESSOR_BEAN_NAME)) {
 			RootBeanDefinition def = new RootBeanDefinition(ConfigurationClassPostProcessor.class);
 			def.setSource(source);
