@@ -172,6 +172,7 @@ class ConfigurationClassParser {
 	/**
 	 * @return annotation metadata of superclass, {@code null} if none found or previously processed
 	 */
+	//与@Configuration相关的注解类解析，存放到ConfigurationClass
 	protected AnnotationMetadata doProcessConfigurationClass(
 			ConfigurationClass configClass, AnnotationMetadata metadata) throws IOException {
 
@@ -204,6 +205,7 @@ class ConfigurationClassParser {
 		Set<Object> visited = new LinkedHashSet<Object>();
 		collectImports(metadata, imports, visited);
 		if (!imports.isEmpty()) {
+		    //读取import， 加载ImportSelector、ImportBeanDefinitionRegistrar等注解
 			processImport(configClass, imports, true);
 		}
 

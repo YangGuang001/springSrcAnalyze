@@ -83,7 +83,7 @@ public class ClassPathScanningCandidateComponentProvider implements EnvironmentC
 			new CachingMetadataReaderFactory(this.resourcePatternResolver);
 
 	private String resourcePattern = DEFAULT_RESOURCE_PATTERN;
-
+	//添加对应注解类型，对应类型注册为Bean
 	private final List<TypeFilter> includeFilters = new LinkedList<TypeFilter>();
 
 	private final List<TypeFilter> excludeFilters = new LinkedList<TypeFilter>();
