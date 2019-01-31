@@ -147,6 +147,7 @@ public class SpringServletContainerInitializer implements ServletContainerInitia
 	 * @see WebApplicationInitializer#onStartup(ServletContext)
 	 * @see AnnotationAwareOrderComparator
 	 */
+	//ServletContainerInitializer tomcat容器启动初始化
 	public void onStartup(Set<Class<?>> webAppInitializerClasses, ServletContext servletContext)
 			throws ServletException {
 

@@ -65,8 +65,9 @@ public abstract class AbstractDispatcherServletInitializer
 
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
+		//root webApplicationContext出初始化
 		super.onStartup(servletContext);
-
+		//添加DispatcherServlet到ServletContext中
 		this.registerDispatcherServlet(servletContext);
 	}
 
@@ -84,25 +85,27 @@ public abstract class AbstractDispatcherServletInitializer
 		String servletName = this.getServletName();
 		Assert.hasLength(servletName,
 				"getServletName() may not return empty or null");
-
+		//创建AnnotationConfigWebApplicationContext，但是这个还没有初始化，初始化在initServletBean中进行
 		WebApplicationContext servletAppContext = this.createServletApplicationContext();
 		Assert.notNull(servletAppContext,
 				"createServletApplicationContext() did not return an application " +
 						"context for servlet [" + servletName + "]");
-
+		//设置
 		DispatcherServlet dispatcherServlet = new DispatcherServlet(servletAppContext);
-
+		//添加spring MVC的servlet为tomcat的ServletContext中的一个context
 		ServletRegistration.Dynamic registration =
 				servletContext.addServlet(servletName, dispatcherServlet);
 
 		Assert.notNull(registration,
 				"Failed to register servlet with name '" + servletName + "'." +
 				"Check if there is another servlet registered under the same name.");
-
+		//设置为第一个初始化
 		registration.setLoadOnStartup(1);
+		//添加mapping到servlet上，tomcat根据mapping路由到这个servlet上
 		registration.addMapping(getServletMappings());
+		//判断异步或者同步servlet
 		registration.setAsyncSupported(isAsyncSupported());
-
+		//添加filter, filter在mapping之前处理
 		Filter[] filters = getServletFilters();
 		if (!ObjectUtils.isEmpty(filters)) {
 			for (Filter filter : filters) {

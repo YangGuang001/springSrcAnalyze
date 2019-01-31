@@ -112,6 +112,8 @@ public abstract class HttpServletBean extends HttpServlet
 	 * @throws ServletException if bean properties are invalid (or required
 	 * properties are missing), or if subclass initialization fails.
 	 */
+	//容器ServletContext初始化完成后，回调servlet的init方法
+	//init方法主要初始化spring webApplicationContext
 	@Override
 	public final void init() throws ServletException {
 		if (logger.isDebugEnabled()) {

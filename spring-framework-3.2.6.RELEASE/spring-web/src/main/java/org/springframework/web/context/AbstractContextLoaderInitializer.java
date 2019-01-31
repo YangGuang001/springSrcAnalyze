@@ -40,7 +40,7 @@ public abstract class AbstractContextLoaderInitializer implements WebApplication
 
 	/** Logger available to subclasses. */
 	protected final Log logger = LogFactory.getLog(getClass());
-
+	//容器启动，SpringServletContainerInitializer初始化所有的WebApplicationInitializer的onStartup
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		this.registerContextLoaderListener(servletContext);
 	}
@@ -52,8 +52,10 @@ public abstract class AbstractContextLoaderInitializer implements WebApplication
 	 * @param servletContext the servlet context to register the listener against
 	 */
 	protected void registerContextLoaderListener(ServletContext servletContext) {
+		//初始化rootcontext，
 		WebApplicationContext rootAppContext = this.createRootApplicationContext();
 		if (rootAppContext != null) {
+			//tomcat的conext初始化完成后，再初始化spring webapplicationContext
 			servletContext.addListener(new ContextLoaderListener(rootAppContext));
 		}
 		else {

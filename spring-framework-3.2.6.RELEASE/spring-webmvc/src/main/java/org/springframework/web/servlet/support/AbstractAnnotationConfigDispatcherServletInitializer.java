@@ -46,6 +46,7 @@ public abstract class AbstractAnnotationConfigDispatcherServletInitializer
 	 * providing it the annotated classes returned by {@link #getRootConfigClasses()}.
 	 * Returns {@code null} if {@link #getRootConfigClasses()} returns {@code null}.
 	 */
+	//初始化rootContext
 	@Override
 	protected WebApplicationContext createRootApplicationContext() {
 		Class<?>[] rootConfigClasses = this.getRootConfigClasses();
@@ -67,6 +68,7 @@ public abstract class AbstractAnnotationConfigDispatcherServletInitializer
 	 * @throws IllegalArgumentException if {@link #getServletConfigClasses()} returns
 	 * empty or {@code null}
 	 */
+	//初始化servletApplicationContext
 	@Override
 	protected WebApplicationContext createServletApplicationContext() {
 		AnnotationConfigWebApplicationContext servletAppContext =
