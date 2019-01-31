@@ -50,6 +50,7 @@ final class SimpleMetadataReader implements MetadataReader {
 		InputStream is = new BufferedInputStream(resource.getInputStream());
 		ClassReader classReader;
 		try {
+			//使用asm-all加载Class
 			classReader = new ClassReader(is);
 		}
 		catch (IllegalArgumentException ex) {

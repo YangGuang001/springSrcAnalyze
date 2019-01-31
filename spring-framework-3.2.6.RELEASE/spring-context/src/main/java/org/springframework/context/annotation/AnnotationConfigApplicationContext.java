@@ -59,7 +59,7 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	public AnnotationConfigApplicationContext() {
 		//创建一个读取注解的Bean定义读取器，并将其设置到容器中
 		this.reader = new AnnotatedBeanDefinitionReader(this);
-		//创建一个扫描指定类路径中注解Bean定义的，并将其设置到容器中
+		//创建一个扫描指定类路径中注解Bean定义的，并将其设置到容器中 描到的注解Bean定义载入并注册
 		this.scanner = new ClassPathBeanDefinitionScanner(this);
 	}
 
@@ -162,7 +162,7 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 * @see #refresh()
 	 */
 	//该构造函数会自动扫描以给定的包及其子包下的所有类，并自动识别所有的Spring Bean，将其
-	//注册到容器中
+	//注册到容器中 描到的注解Bean定义载入并注册
 	//扫描指定包路径及其子包下的注解类，为了使新添加的类被处理，必须手动调用
 	//refresh()方法刷新容器
 	public void scan(String... basePackages) {

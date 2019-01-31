@@ -106,7 +106,7 @@ public class ScopedProxyFactoryBean extends ProxyConfig implements FactoryBean<O
 		// Add the AopInfrastructureBean marker to indicate that the scoped proxy
 		// itself is not subject to auto-proxying! Only its target bean is.
 		pf.addInterface(AopInfrastructureBean.class);
-
+		//设置代理工厂
 		this.proxy = pf.getProxy(cbf.getBeanClassLoader());
 	}
 

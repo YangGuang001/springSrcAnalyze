@@ -248,15 +248,18 @@ public class AnnotationConfigUtils {
 			}
 		}
 	}
-
+    //根据作用域为Bean应用引用的代理模式
 	static BeanDefinitionHolder applyScopedProxyMode(
 			ScopeMetadata metadata, BeanDefinitionHolder definition, BeanDefinitionRegistry registry) {
-
+        //获取注解Bean定义类中@Scope注解的proxyMode属性值
 		ScopedProxyMode scopedProxyMode = metadata.getScopedProxyMode();
 		if (scopedProxyMode.equals(ScopedProxyMode.NO)) {
 			return definition;
 		}
+        //获取配置的@Scope注解的proxyMode属性值，如果为TARGET_CLASS，则返
+        //回true，如果为INTERFACES，则返回false
 		boolean proxyTargetClass = scopedProxyMode.equals(ScopedProxyMode.TARGET_CLASS);
+        //为注册的Bean创建相应模式的代理对象
 		return ScopedProxyCreator.createScopedProxy(definition, registry, proxyTargetClass);
 	}
 
