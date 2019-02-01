@@ -147,6 +147,7 @@ public abstract class TransactionSynchronizationManager {
 	 * Actually check the value of the resource that is bound for the given key.
 	 */
 	private static Object doGetResource(Object actualKey) {
+		//线程级别的，从资源池中获取连接
 		Map<Object, Object> map = resources.get();
 		if (map == null) {
 			return null;

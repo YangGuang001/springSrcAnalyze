@@ -37,6 +37,7 @@ import org.springframework.util.Assert;
  * @see #setDefaultTargetDataSource
  * @see #determineCurrentLookupKey()
  */
+//可以实现动态调整 数据源
 public abstract class AbstractRoutingDataSource extends AbstractDataSource implements InitializingBean {
 
 	private Map<Object, Object> targetDataSources;
@@ -157,7 +158,7 @@ public abstract class AbstractRoutingDataSource extends AbstractDataSource imple
 		}
 	}
 
-
+	//获取connection
 	public Connection getConnection() throws SQLException {
 		return determineTargetDataSource().getConnection();
 	}

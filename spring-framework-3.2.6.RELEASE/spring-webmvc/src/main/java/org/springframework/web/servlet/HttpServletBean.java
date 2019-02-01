@@ -133,7 +133,7 @@ public abstract class HttpServletBean extends HttpServlet
 			logger.error("Failed to set bean properties on servlet '" + getServletName() + "'", ex);
 			throw ex;
 		}
-
+		//初始化spring的容器
 		// Let subclasses do whatever initialization they like.
 		initServletBean();
 
