@@ -274,14 +274,18 @@ public abstract class TransactionAspectSupport implements BeanFactoryAware, Init
 		else {
 			// It's a CallbackPreferringPlatformTransactionManager: pass a TransactionCallback in.
 			try {
+			    //
 				Object result = ((CallbackPreferringPlatformTransactionManager) tm).execute(txAttr,
 						new TransactionCallback<Object>() {
 							public Object doInTransaction(TransactionStatus status) {
+							    //开始事物信息
 								TransactionInfo txInfo = prepareTransactionInfo(tm, txAttr, joinpointIdentification, status);
 								try {
+								    //执行业务
 									return invocation.proceedWithInvocation();
 								}
 								catch (Throwable ex) {
+								    //异常回滚
 									if (txAttr.rollbackOn(ex)) {
 										// A RuntimeException: will lead to a rollback.
 										if (ex instanceof RuntimeException) {
@@ -297,6 +301,7 @@ public abstract class TransactionAspectSupport implements BeanFactoryAware, Init
 									}
 								}
 								finally {
+								    //清除事物信息
 									cleanupTransactionInfo(txInfo);
 								}
 							}

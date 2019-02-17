@@ -317,7 +317,7 @@ public abstract class AbstractAutoProxyCreator extends ProxyConfig
 	 */
 	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
 		if (bean != null) {
-			//从缓存中查找
+			//从缓存中查找是否已经被代理过
 			Object cacheKey = getCacheKey(bean.getClass(), beanName);
 			if (!this.earlyProxyReferences.containsKey(cacheKey)) {
 				return wrapIfNecessary(bean, beanName, cacheKey);
@@ -353,15 +353,19 @@ public abstract class AbstractAutoProxyCreator extends ProxyConfig
 		if (Boolean.FALSE.equals(this.advisedBeans.get(cacheKey))) {
 			return bean;
 		}
+		//如果Bean为AOP类的类型，或者需要跳过的类型
 		if (isInfrastructureClass(bean.getClass()) || shouldSkip(bean.getClass(), beanName)) {
 			this.advisedBeans.put(cacheKey, Boolean.FALSE);
 			return bean;
 		}
 		//根据advisor和advice等配置判断是否需要进行代理
 		// Create proxy if we have advice.
+		//寻找合适Bean的增强方法
 		Object[] specificInterceptors = getAdvicesAndAdvisorsForBean(bean.getClass(), beanName, null);
 		if (specificInterceptors != DO_NOT_PROXY) {
+			//标记为已经代理
 			this.advisedBeans.put(cacheKey, Boolean.TRUE);
+			//对增强方法进行代理
 			Object proxy = createProxy(bean.getClass(), beanName, specificInterceptors, new SingletonTargetSource(bean));
 			this.proxyTypes.put(cacheKey, proxy.getClass());
 			return proxy;
@@ -463,20 +467,21 @@ public abstract class AbstractAutoProxyCreator extends ProxyConfig
 				proxyFactory.addInterface(targetInterface);
 			}
 		}
-
+		//处理所有得到的合适的烂机器抓换为Advisor
 		Advisor[] advisors = buildAdvisors(beanName, specificInterceptors);
 		for (Advisor advisor : advisors) {
 			proxyFactory.addAdvisor(advisor);
 		}
 
 		proxyFactory.setTargetSource(targetSource);
+		//定制代理
 		customizeProxyFactory(proxyFactory);
 
 		proxyFactory.setFrozen(this.freezeProxy);
 		if (advisorsPreFiltered()) {
 			proxyFactory.setPreFiltered(true);
 		}
-
+		//创建代理对象
 		return proxyFactory.getProxy(this.proxyClassLoader);
 	}
 
