@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fee48178-7d96-4f47-ad68-d87594e4ccd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/config/AopNamespaceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/config/AopNamespaceUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ProxyCreatorSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ProxyCreatorSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/BeanFactoryAdvisorRetrievalHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/BeanFactoryAdvisorRetrievalHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,11 +88,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="221" column="17" lean-forward="true" selection-start-line="221" selection-start-column="17" selection-end-line="221" selection-end-column="17" />
+            <state relative-caret-position="432">
+              <caret line="207" column="49" lean-forward="true" selection-start-line="207" selection-start-column="49" selection-end-line="207" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="622">
+              <caret line="173" column="34" selection-start-line="173" selection-start-column="34" selection-end-line="173" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -108,32 +120,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
               <caret line="702" column="25" selection-start-line="702" selection-start-column="25" selection-end-line="702" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
-              <folding>
-                <element signature="e#3907#3908#0" expanded="true" />
-                <element signature="e#3967#3968#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="277" column="32" selection-start-line="277" selection-start-column="32" selection-end-line="277" selection-end-column="32" />
-              <folding>
-                <element signature="e#9172#9173#0" expanded="true" />
-                <element signature="e#9223#9224#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -155,6 +141,7 @@
       <find>commit</find>
       <find>resolvedDataSources</find>
       <find>getInstance</find>
+      <find>invoke(</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,6 +187,8 @@
         <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java" />
         <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ProxyCreatorSupport.java" />
         <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java" />
       </list>
     </option>
   </component>
@@ -217,71 +206,13 @@
       <flattenPackages ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="spring-framework-3.2.6.RELEASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-framework-3.2.6.RELEASE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-framework-3.2.6.RELEASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-framework-3.2.6.RELEASE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="spring-jdbc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-framework-3.2.6.RELEASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-framework-3.2.6.RELEASE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="spring-jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-framework-3.2.6.RELEASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-framework-3.2.6.RELEASE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="spring-jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-framework-3.2.6.RELEASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-framework-3.2.6.RELEASE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="spring-jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-framework-3.2.6.RELEASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-framework-3.2.6.RELEASE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="spring-tx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-framework-3.2.6.RELEASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-framework-3.2.6.RELEASE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="spring-tx" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-framework-3.2.6.RELEASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-framework-3.2.6.RELEASE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="spring-tx" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GO_FMT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550394158232" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550395961905" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -327,7 +258,7 @@
       <workItem from="1549540216917" duration="1477000" />
       <workItem from="1549590801518" duration="598000" />
       <workItem from="1550333713803" duration="618000" />
-      <workItem from="1550372322248" duration="3634000" />
+      <workItem from="1550372322248" duration="4908000" />
     </task>
     <task id="LOCAL-00001" summary="annotation">
       <created>1548754296809</created>
@@ -378,11 +309,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548918441250</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="annotation test">
+      <created>1550394175689</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550394175690</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63522000" />
+    <option name="totallyTimeSpent" value="64796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -437,20 +375,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="annotation test" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/RuleBasedTransactionAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="45" column="70" lean-forward="true" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/DefaultTransactionAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/DefaultTransactionDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-228" />
@@ -798,8 +722,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="221" column="17" lean-forward="true" selection-start-line="221" selection-start-column="17" selection-end-line="221" selection-end-column="17" />
+        <state relative-caret-position="432">
+          <caret line="207" column="49" lean-forward="true" selection-start-line="207" selection-start-column="49" selection-end-line="207" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="173" column="34" selection-start-line="173" selection-start-column="34" selection-end-line="173" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
         </state>
       </provider>
     </entry>

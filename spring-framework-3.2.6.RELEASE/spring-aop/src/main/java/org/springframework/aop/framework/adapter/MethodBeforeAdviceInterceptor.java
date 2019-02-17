@@ -41,11 +41,12 @@ public class MethodBeforeAdviceInterceptor implements MethodInterceptor, Seriali
 	 * Create a new MethodBeforeAdviceInterceptor for the given advice.
 	 * @param advice the MethodBeforeAdvice to wrap
 	 */
+	//保存advice方法
 	public MethodBeforeAdviceInterceptor(MethodBeforeAdvice advice) {
 		Assert.notNull(advice, "Advice must not be null");
 		this.advice = advice;
 	}
-
+	//调用前置方法
 	public Object invoke(MethodInvocation mi) throws Throwable {
 		this.advice.before(mi.getMethod(), mi.getArguments(), mi.getThis() );
 		return mi.proceed();
