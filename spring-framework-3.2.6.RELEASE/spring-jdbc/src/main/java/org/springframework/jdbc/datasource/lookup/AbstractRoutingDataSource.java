@@ -160,6 +160,7 @@ public abstract class AbstractRoutingDataSource extends AbstractDataSource imple
 
 	//获取connection
 	public Connection getConnection() throws SQLException {
+		//可以拓展为动态切换连接
 		return determineTargetDataSource().getConnection();
 	}
 

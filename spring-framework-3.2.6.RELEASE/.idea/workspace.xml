@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="fee48178-7d96-4f47-ad68-d87594e4ccd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAdvisorChainFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAdvisorChainFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/cache/config/AnnotationDrivenCacheBeanDefinitionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/cache/config/AnnotationDrivenCacheBeanDefinitionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/config/AnnotationDrivenBeanDefinitionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/config/AnnotationDrivenBeanDefinitionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/ResourceHolderSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/ResourceHolderSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionSynchronizationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionSynchronizationManager.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,98 +34,95 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/autoproxy/AspectJAwareAdvisorAutoProxyCreator.java">
+        <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="7372">
+              <caret line="432" column="36" selection-start-line="432" selection-start-column="36" selection-end-line="432" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java">
+        <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/PlatformTransactionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-855">
-              <folding>
-                <element signature="e#6729#6730#0" expanded="true" />
-                <element signature="e#6753#6754#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/LazyConnectionDataSourceProxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="290" column="58" lean-forward="true" selection-start-line="290" selection-start-column="58" selection-end-line="290" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ProxyFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
-              <folding>
-                <element signature="e#3750#3751#0" expanded="true" />
-                <element signature="e#3802#3803#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ProxyCreatorSupport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="100" column="42" selection-start-line="100" selection-start-column="42" selection-end-line="100" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/AopProxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="207" column="49" lean-forward="true" selection-start-line="207" selection-start-column="49" selection-end-line="207" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="173" column="34" selection-start-line="173" selection-start-column="34" selection-end-line="173" selection-end-column="34" />
+            <state relative-caret-position="1026">
+              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java">
+        <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+            <state relative-caret-position="414">
+              <caret line="509" column="13" lean-forward="true" selection-start-line="509" selection-start-column="13" selection-end-line="509" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/reflect/Proxy.java">
+        <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionSynchronizationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="702" column="25" selection-start-line="702" selection-start-column="25" selection-end-line="702" selection-end-column="25" />
+            <state relative-caret-position="4313">
+              <caret line="254" column="21" selection-start-line="254" selection-start-column="21" selection-end-line="254" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/DefaultTransactionStatus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4731">
+              <caret line="280" column="13" selection-start-line="280" selection-start-column="13" selection-end-line="280" selection-end-column="13" />
+              <folding>
+                <element signature="e#5885#5886#0" expanded="true" />
+                <element signature="e#5925#5926#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/javax/sql/DataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1216">
+              <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2546">
+              <caret line="162" column="21" selection-start-line="162" selection-start-column="21" selection-end-line="162" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DelegatingDataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1083">
+              <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/ResourceHolderSupport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="893">
+              <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -136,12 +139,17 @@
       <find>findCandidateComponents</find>
       <find>WebApplicationContext</find>
       <find>webApplicationContext</find>
-      <find>resources</find>
       <find>doBegin</find>
       <find>commit</find>
       <find>resolvedDataSources</find>
       <find>getInstance</find>
       <find>invoke(</find>
+      <find>configureAutoProxyCreator(Element element, ParserContext parserContext)</find>
+      <find>doCleanupAfterCompletion(Object transaction)</find>
+      <find>createTransactionIfNecessary</find>
+      <find>resources</find>
+      <find>handleExistingTransaction(</find>
+      <find>ReentrantReadWriteLock</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,10 +184,7 @@
         <option value="$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/support/AbstractAnnotationConfigDispatcherServletInitializer.java" />
         <option value="$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" />
         <option value="$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HttpServletBean.java" />
-        <option value="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionSynchronizationManager.java" />
-        <option value="$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.java" />
         <option value="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionTemplate.java" />
-        <option value="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java" />
         <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/config/AopNamespaceUtils.java" />
         <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/BeanFactoryAdvisorRetrievalHelper.java" />
         <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java" />
@@ -189,12 +194,21 @@
         <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" />
         <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" />
         <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java" />
+        <option value="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/cache/config/AnnotationDrivenCacheBeanDefinitionParser.java" />
+        <option value="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/config/AnnotationDrivenBeanDefinitionParser.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAdvisorChainFactory.java" />
+        <option value="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/ResourceHolderSupport.java" />
+        <option value="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionSynchronizationManager.java" />
+        <option value="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java" />
+        <option value="$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.java" />
+        <option value="$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java" />
+        <option value="$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="287" />
-    <option name="y" value="291" />
+    <option name="x" value="844" />
+    <option name="y" value="13" />
     <option name="width" value="1165" />
     <option name="height" value="1000" />
   </component>
@@ -212,7 +226,7 @@
     <property name="GO_FMT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550395961905" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550418150860" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -258,7 +272,8 @@
       <workItem from="1549540216917" duration="1477000" />
       <workItem from="1549590801518" duration="598000" />
       <workItem from="1550333713803" duration="618000" />
-      <workItem from="1550372322248" duration="4908000" />
+      <workItem from="1550372322248" duration="10954000" />
+      <workItem from="1550575910456" duration="939000" />
     </task>
     <task id="LOCAL-00001" summary="annotation">
       <created>1548754296809</created>
@@ -316,11 +331,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550394175690</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="annotation test">
+      <created>1550396257028</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1550396257028</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64796000" />
+    <option name="totallyTimeSpent" value="71781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -332,7 +354,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" id="Structure" order="6" visible="true" weight="0.16151386" />
+      <window_info active="true" id="Structure" order="6" visible="true" weight="0.037846483" />
       <window_info id="Build Variants" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -375,139 +397,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="annotation test" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/DefaultTransactionDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-228" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/TransactionDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DriverManagerDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/sql/CommonDataSource.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/sql/DataSource.java" />
-    <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DelegatingDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="83" column="37" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionSynchronizationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2812">
-          <caret line="175" column="75" selection-start-line="175" selection-start-column="75" selection-end-line="175" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionSynchronizationUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="71" column="26" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/lookup/IsolationLevelDataSourceRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="91" column="64" lean-forward="true" selection-start-line="91" selection-start-column="64" selection-end-line="91" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/javax/sql/DataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/AbstractDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="38" column="56" lean-forward="true" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12350">
-          <caret line="695" column="24" selection-start-line="695" selection-start-column="24" selection-end-line="695" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4503">
-          <caret line="277" column="87" selection-start-line="277" selection-start-column="87" selection-end-line="277" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/CallbackPreferringPlatformTransactionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/jta/WebSphereUowTransactionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4560">
-          <caret line="284" column="38" selection-start-line="284" selection-start-column="32" selection-end-line="284" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-aspects/src/main/java/org/springframework/transaction/aspectj/AbstractTransactionAspect.aj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="93" column="27" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2147">
-          <caret line="139" column="13" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/config/PropertyPlaceholderConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/access/SingletonBeanFactoryLocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5320">
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/remoting/support/RemoteExporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2679">
-          <caret line="166" column="9" selection-start-line="166" selection-start-column="9" selection-end-line="166" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27797">
@@ -530,24 +419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4351">
-          <caret line="260" column="21" selection-start-line="260" selection-start-column="21" selection-end-line="260" selection-end-column="21" />
-          <folding>
-            <element signature="e#5885#5886#0" expanded="true" />
-            <element signature="e#5925#5926#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -736,8 +607,181 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+        <state relative-caret-position="228">
+          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/scheduling/config/AnnotationDrivenBeanDefinitionParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/cache/config/AnnotationDrivenCacheBeanDefinitionParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AbstractBeanFactoryPointcutAdvisor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+          <folding>
+            <element signature="e#2331#2332#0" expanded="true" />
+            <element signature="e#2364#2365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/BeanFactoryTransactionAttributeSourceAdvisor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/BeanDefinitionRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/config/AnnotationDrivenBeanDefinitionParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="140" column="35" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAdvisorChainFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="63" column="53" lean-forward="true" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="93" column="25" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/DefaultTransactionAttribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="93" column="19" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
+          <folding>
+            <element signature="e#2777#2778#0" expanded="true" />
+            <element signature="e#2846#2847#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAttribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/SavepointManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/TransactionStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractTransactionStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="45" column="66" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7372">
+          <caret line="432" column="36" selection-start-line="432" selection-start-column="36" selection-end-line="432" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/PlatformTransactionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionSynchronizationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4313">
+          <caret line="254" column="21" selection-start-line="254" selection-start-column="21" selection-end-line="254" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/DefaultTransactionStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4731">
+          <caret line="280" column="13" selection-start-line="280" selection-start-column="13" selection-end-line="280" selection-end-column="13" />
+          <folding>
+            <element signature="e#5885#5886#0" expanded="true" />
+            <element signature="e#5925#5926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/javax/sql/DataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2546">
+          <caret line="162" column="21" selection-start-line="162" selection-start-column="21" selection-end-line="162" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DelegatingDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/ResourceHolderSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="509" column="13" lean-forward="true" selection-start-line="509" selection-start-column="13" selection-end-line="509" selection-end-column="13" />
         </state>
       </provider>
     </entry>

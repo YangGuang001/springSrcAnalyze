@@ -102,12 +102,14 @@ class AnnotationDrivenCacheBeanDefinitionParser implements BeanDefinitionParser 
 	private static class AopAutoProxyConfigurer {
 
 		public static void configureAutoProxyCreator(Element element, ParserContext parserContext) {
+			//向IOC注册InfrastructureAdvisorAutoProxyCreator这个类型的Bean
 			AopNamespaceUtils.registerAutoProxyCreatorIfNecessary(parserContext, element);
 
 			if (!parserContext.getRegistry().containsBeanDefinition(CACHE_ADVISOR_BEAN_NAME)) {
 				Object eleSource = parserContext.extractSource(element);
 
 				// Create the CacheOperationSource definition.
+				// 创建AnnotationTransactionAttributeSource类型的Bean
 				RootBeanDefinition sourceDef = new RootBeanDefinition(AnnotationCacheOperationSource.class);
 				sourceDef.setSource(eleSource);
 				sourceDef.setRole(BeanDefinition.ROLE_INFRASTRUCTURE);

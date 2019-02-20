@@ -173,14 +173,18 @@ public abstract class TransactionSynchronizationManager {
 	 * @see ResourceTransactionManager#getResourceFactory()
 	 */
 	public static void bindResource(Object key, Object value) throws IllegalStateException {
+		// 从上面可知，线程变量是一个Map，而这个Key就是dataSource
+		// 这个value这里剧透一下就是holder，在创建事务时会再次提到
 		Object actualKey = TransactionSynchronizationUtils.unwrapResourceIfNecessary(key);
 		Assert.notNull(value, "Value must not be null");
+		// 获取这个线程变量Map
 		Map<Object, Object> map = resources.get();
 		// set ThreadLocal Map if none found
 		if (map == null) {
 			map = new HashMap<Object, Object>();
 			resources.set(map);
 		}
+		// 将新的holder作为value，dataSource作为key放入当前线程Map中
 		Object oldValue = map.put(actualKey, value);
 		// Transparently suppress a ResourceHolder that was marked as void...
 		if (oldValue instanceof ResourceHolder && ((ResourceHolder) oldValue).isVoid()) {
@@ -227,12 +231,15 @@ public abstract class TransactionSynchronizationManager {
 	 * Actually remove the value of the resource that is bound for the given key.
 	 */
 	private static Object doUnbindResource(Object actualKey) {
+		// 取得当前线程的线程变量Map
 		Map<Object, Object> map = resources.get();
 		if (map == null) {
 			return null;
 		}
+		// 将key为dataSourece的value移除出Map，然后将旧的Holder返回
 		Object value = map.remove(actualKey);
 		// Remove entire ThreadLocal if empty...
+		// 如果此时map为空，直接清除线程变量
 		if (map.isEmpty()) {
 			resources.remove();
 		}
@@ -244,6 +251,7 @@ public abstract class TransactionSynchronizationManager {
 			logger.trace("Removed value [" + value + "] for key [" + actualKey + "] from thread [" +
 					Thread.currentThread().getName() + "]");
 		}
+		// 将旧Holder返回
 		return value;
 	}
 

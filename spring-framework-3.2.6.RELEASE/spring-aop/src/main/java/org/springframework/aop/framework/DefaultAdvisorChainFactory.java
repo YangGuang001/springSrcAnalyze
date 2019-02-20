@@ -45,21 +45,31 @@ import org.springframework.aop.support.MethodMatchers;
  */
 @SuppressWarnings("serial")
 public class DefaultAdvisorChainFactory implements AdvisorChainFactory, Serializable {
-
+	/**
+	 * 从提供的配置实例config中获取advisor列表,遍历处理这些advisor.如果是IntroductionAdvisor,
+	 * 则判断此Advisor能否应用到目标类targetClass上.如果是PointcutAdvisor,则判断
+	 * 此Advisor能否应用到目标方法method上.将满足条件的Advisor通过AdvisorAdaptor转化成Interceptor列表返回.
+	 */
 	public List<Object> getInterceptorsAndDynamicInterceptionAdvice(
 			Advised config, Method method, Class targetClass) {
 
 		// This is somewhat tricky... we have to process introductions first,
 		// but we need to preserve order in the ultimate list.
 		List<Object> interceptorList = new ArrayList<Object>(config.getAdvisors().length);
+		// 查看是否包含IntroductionAdvisor
 		boolean hasIntroductions = hasMatchingIntroductions(config, targetClass);
+		// 这里实际上注册一系列AdvisorAdapter,用于将Advisor转化成MethodInterceptor
 		AdvisorAdapterRegistry registry = GlobalAdvisorAdapterRegistry.getInstance();
 		for (Advisor advisor : config.getAdvisors()) {
 			if (advisor instanceof PointcutAdvisor) {
 				// Add it conditionally.
 				PointcutAdvisor pointcutAdvisor = (PointcutAdvisor) advisor;
 				if (config.isPreFiltered() || pointcutAdvisor.getPointcut().getClassFilter().matches(targetClass)) {
+					// 这个地方这两个方法的位置可以互换下
+					// 将Advisor转化成Interceptor
+					// 在这里就是刚才所说的执行链，都将会是MethodInterceptor类型
 					MethodInterceptor[] interceptors = registry.getInterceptors(advisor);
+					//检查当前advisor的pointcut是否可以匹配当前方法
 					MethodMatcher mm = pointcutAdvisor.getPointcut().getMethodMatcher();
 					if (MethodMatchers.matches(mm, method, targetClass, hasIntroductions)) {
 						if (mm.isRuntime()) {
