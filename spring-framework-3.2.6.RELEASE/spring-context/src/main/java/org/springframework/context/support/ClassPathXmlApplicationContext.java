@@ -48,6 +48,7 @@ import org.springframework.util.Assert;
  * @see #getResourceByPath
  * @see GenericApplicationContext
  */
+//路径获取加载Bean的BeanFactory
 public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContext {
 
 	private Resource[] configResources;

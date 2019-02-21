@@ -45,6 +45,7 @@ import org.springframework.util.Assert;
  * @see ClassPathBeanDefinitionScanner
  * @see org.springframework.context.support.GenericXmlApplicationContext
  */
+//注解的方式加载Bean的BeanFactory
 public class AnnotationConfigApplicationContext extends GenericApplicationContext {
 
 	private final AnnotatedBeanDefinitionReader reader;

@@ -135,6 +135,7 @@ public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 	 * Return the name of the current target scope for this bean,
 	 * or {@code null} if not known yet.
 	 */
+	//获取Bean的作用域
 	String getScope();
 
 	/**
@@ -148,6 +149,7 @@ public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 	 * Return whether this bean should be lazily initialized, i.e. not
 	 * eagerly instantiated on startup. Only applicable to a singleton bean.
 	 */
+	//判断此Bean是否延迟加载
 	boolean isLazyInit();
 
 	/**
@@ -160,6 +162,7 @@ public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 	/**
 	 * Return the bean names that this bean depends on.
 	 */
+	//获取依赖Bean的名称列表
 	String[] getDependsOn();
 
 	/**
@@ -205,6 +208,7 @@ public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 	 * <p>The returned instance can be modified during bean factory post-processing.
 	 * @return the MutablePropertyValues object (never {@code null})
 	 */
+	//定义了获取Bean中属性值方法，在依赖注入时会用到这个方法
 	MutablePropertyValues getPropertyValues();
 
 
@@ -213,6 +217,7 @@ public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 	 * returned on all calls.
 	 * @see #SCOPE_SINGLETON
 	 */
+	//定义了判断Bean作用域是否单例或原型的方法。
 	boolean isSingleton();
 
 	/**
@@ -220,6 +225,7 @@ public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 	 * returned for each call.
 	 * @see #SCOPE_PROTOTYPE
 	 */
+	//定义了判断Bean作用域是否单例或原型的方法。
 	boolean isPrototype();
 
 	/**

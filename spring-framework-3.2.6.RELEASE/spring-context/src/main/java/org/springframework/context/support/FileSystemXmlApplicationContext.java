@@ -52,6 +52,7 @@ import org.springframework.core.io.Resource;
  * @see #getResourceByPath
  * @see GenericApplicationContext
  */
+//文件系统资源来加载Bean的BeanFactory
 public class FileSystemXmlApplicationContext extends AbstractXmlApplicationContext {
 
 	/**
