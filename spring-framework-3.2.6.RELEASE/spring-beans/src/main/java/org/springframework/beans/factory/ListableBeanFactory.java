@@ -64,6 +64,7 @@ public interface ListableBeanFactory extends BeanFactory {
 	 * @return if this bean factory contains a bean definition with the given name
 	 * @see #containsBean
 	 */
+	//在IOC容器存放Bean定义的地方是否存在此Bean定义类的方法。
 	boolean containsBeanDefinition(String beanName);
 
 	/**
@@ -110,6 +111,7 @@ public interface ListableBeanFactory extends BeanFactory {
 	 * @see FactoryBean#getObjectType
 	 * @see BeanFactoryUtils#beanNamesForTypeIncludingAncestors(ListableBeanFactory, Class)
 	 */
+	//根据Class获取IOC容器中此类型的所有BeanName的方法。
 	String[] getBeanNamesForType(Class<?> type);
 
 	/**
@@ -173,6 +175,7 @@ public interface ListableBeanFactory extends BeanFactory {
 	 * @see FactoryBean#getObjectType
 	 * @see BeanFactoryUtils#beansOfTypeIncludingAncestors(ListableBeanFactory, Class)
 	 */
+	//根据某种类型获取Bean
 	<T> Map<String, T> getBeansOfType(Class<T> type) throws BeansException;
 
 	/**
