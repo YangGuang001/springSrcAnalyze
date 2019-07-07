@@ -295,6 +295,7 @@ public class ConfigurationClassPostProcessor implements BeanDefinitionRegistryPo
 		parser.validate();
 
 		// Handle any @PropertySource annotations
+		//PropertySource注解配置文件注入到StandardEnvironment环境中，spring 实例化时，进行替换
 		Stack<PropertySource<?>> parsedPropertySources = parser.getPropertySources();
 		if (!parsedPropertySources.isEmpty()) {
 			if (!(this.environment instanceof ConfigurableEnvironment)) {

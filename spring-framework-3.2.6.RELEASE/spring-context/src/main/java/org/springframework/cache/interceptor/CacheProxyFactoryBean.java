@@ -38,6 +38,10 @@ import org.springframework.aop.support.DefaultPointcutAdvisor;
  * @see org.springframework.aop.framework.ProxyFactoryBean
  * @see CacheInterceptor
  */
+
+/**
+ * spring cache 代理类入口
+ */
 @SuppressWarnings("serial")
 public class CacheProxyFactoryBean extends AbstractSingletonProxyFactoryBean {
 

@@ -149,6 +149,7 @@ final class JdkDynamicAopProxy implements AopProxy, InvocationHandler, Serializa
 	 * <p>Callers will see exactly the exception thrown by the target,
 	 * unless a hook method throws an exception.
 	 */
+	//动态代理 入口， 在Bean实例化完成后，返回Bean之前，获取到增强实现类，返回代理类ProxyBean
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		MethodInvocation invocation;
 		Object oldProxy = null;

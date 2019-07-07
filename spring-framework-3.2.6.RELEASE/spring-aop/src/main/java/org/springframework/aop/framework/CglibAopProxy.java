@@ -593,6 +593,9 @@ final class CglibAopProxy implements AopProxy, Serializable {
 	 * General purpose AOP callback. Used when the target is dynamic or when the
 	 * proxy is not frozen.
 	 */
+	/**
+	 * 动态代理 aspectJ的拦截器
+	 */
 	private static class DynamicAdvisedInterceptor implements MethodInterceptor, Serializable {
 
 		private AdvisedSupport advised;

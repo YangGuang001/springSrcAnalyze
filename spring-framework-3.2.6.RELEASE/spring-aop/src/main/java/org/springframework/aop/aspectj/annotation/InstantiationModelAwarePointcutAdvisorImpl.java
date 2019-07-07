@@ -37,6 +37,10 @@ import org.springframework.aop.support.Pointcuts;
  * @author Juergen Hoeller
  * @since 2.0
  */
+
+/**
+ * 根据切点信息生成增强，所有的增强都有Advisor的实现类InstantiationModelAwarePointcutAdvisorImpl统一封装
+ */
 class InstantiationModelAwarePointcutAdvisorImpl
 		implements InstantiationModelAwarePointcutAdvisor, AspectJPrecedenceInformation {
 
@@ -135,7 +139,7 @@ class InstantiationModelAwarePointcutAdvisorImpl
 		return (this.instantiatedAdvice != null);
 	}
 
-
+	//增强器在这个类中实现
 	private Advice instantiateAdvice(AspectJExpressionPointcut pcut) {
 		return this.atAspectJAdvisorFactory.getAdvice(
 				this.method, pcut, this.aspectInstanceFactory, this.declarationOrder, this.aspectName);

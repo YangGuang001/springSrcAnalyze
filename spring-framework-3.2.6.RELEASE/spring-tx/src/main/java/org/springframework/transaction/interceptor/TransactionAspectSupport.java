@@ -249,7 +249,7 @@ public abstract class TransactionAspectSupport implements BeanFactoryAware, Init
 		// 先去获取事务的属性
 		final TransactionAttribute txAttr = getTransactionAttributeSource().getTransactionAttribute(method, targetClass);
 		// 从属性中获取事务管理器，这里承接上一篇文章中自定义标签那里，在配置文件中配置一个事务管理器
-		// PlatformTransactionManager有很多种，这里分析常用的DataSourceTransactionManager
+		// PlatformTransactionManager有很多种，这里分析常用的默认DataSourceTransactionManager，因为没有指定名称和接口，就调用默认注入的DataSourceTransactionManager
 		final PlatformTransactionManager tm = determineTransactionManager(txAttr);
 		// 给pointcut一个名称
 		final String joinpointIdentification = methodIdentification(method, targetClass);

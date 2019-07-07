@@ -46,6 +46,10 @@ import java.util.Properties;
  * @see org.springframework.aop.framework.ProxyFactoryBean
  * @see org.springframework.aop.framework.ProxyFactory
  */
+
+/**
+ * 如果返回代理时候被匹配中了，则在调用的时候，事物的拦截器
+ */
 @SuppressWarnings("serial")
 public class TransactionInterceptor extends TransactionAspectSupport implements MethodInterceptor, Serializable {
 
@@ -83,13 +87,18 @@ public class TransactionInterceptor extends TransactionAspectSupport implements 
 		setTransactionAttributeSource(tas);
 	}
 
-
+	/**
+	 * 拦截开始
+	 * @param invocation
+	 * @return
+	 * @throws Throwable
+	 */
 	public Object invoke(final MethodInvocation invocation) throws Throwable {
 		// Work out the target class: may be {@code null}.
 		// The TransactionAttributeSource should be passed the target class
 		// as well as the method, which may be from an interface.
 		Class<?> targetClass = (invocation.getThis() != null ? AopUtils.getTargetClass(invocation.getThis()) : null);
-
+		//开始事物调用
 		// Adapt to TransactionAspectSupport's invokeWithinTransaction...
 		return invokeWithinTransaction(invocation.getMethod(), targetClass, new InvocationCallback() {
 			public Object proceedWithInvocation() throws Throwable {

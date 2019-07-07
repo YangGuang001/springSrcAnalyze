@@ -427,7 +427,7 @@ public class DispatcherServlet extends FrameworkServlet {
 	/**
 	 * This implementation calls {@link #initStrategies}.
 	 */
-	//spring ApplicationContext ÊµÀı»¯Íê³Éºó£¬ÔÙ³õÊ¼»¯springmvc ´¦ÀíÇëÇó²ßÂÔ
+	//spring ApplicationContext Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½ï¿½Ù³ï¿½Ê¼ï¿½ï¿½springmvc ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@Override
 	protected void onRefresh(ApplicationContext context) {
 		initStrategies(context);
@@ -437,7 +437,7 @@ public class DispatcherServlet extends FrameworkServlet {
 	 * Initialize the strategy objects that this servlet uses.
 	 * <p>May be overridden in subclasses in order to initialize further strategy objects.
 	 */
-	//³õÊ¼»¯¸÷ÖÖ×ÊÔ´£¬mapping£¬ view, ...µÈ
+	//åˆå§‹åŒ–å„ç§èµ„æºï¼Œmappingï¼Œ view, ...ç­‰
 	protected void initStrategies(ApplicationContext context) {
 		initMultipartResolver(context);
 		initLocaleResolver(context);
@@ -817,7 +817,7 @@ public class DispatcherServlet extends FrameworkServlet {
 	 * Exposes the DispatcherServlet-specific request attributes and delegates to {@link #doDispatch}
 	 * for the actual dispatching.
 	 */
-	//tomcat³õÊ¼»¯Íê³Éºó£¬httpÇëÇóµ½ÕâÀï£¬½øĞĞmapping module view
+	//tomcatåˆå§‹åŒ–å®Œæˆåï¼Œhttpè¯·æ±‚åˆ°è¿™é‡Œï¼Œè¿›è¡Œmapping module view
 	@Override
 	protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		if (logger.isDebugEnabled()) {
@@ -843,7 +843,7 @@ public class DispatcherServlet extends FrameworkServlet {
 		}
 
 		// Make framework objects available to handlers and view objects.
-		//ÉèÖÃspring WebApplicationContextµ½HttpServletRequestÖĞ
+		//è®¾ç½®spring WebApplicationContextåˆ°HttpServletRequestä¸­
 		request.setAttribute(WEB_APPLICATION_CONTEXT_ATTRIBUTE, getWebApplicationContext());
 		request.setAttribute(LOCALE_RESOLVER_ATTRIBUTE, this.localeResolver);
 		request.setAttribute(THEME_RESOLVER_ATTRIBUTE, this.themeResolver);
@@ -857,7 +857,7 @@ public class DispatcherServlet extends FrameworkServlet {
 		request.setAttribute(FLASH_MAP_MANAGER_ATTRIBUTE, this.flashMapManager);
 
 		try {
-			//¿ªÊ¼·Ö·¢ÇëÇó
+			//å¼€å§‹åˆ†å‘è¯·æ±‚
 			doDispatch(request, response);
 		}
 		finally {
@@ -882,7 +882,7 @@ public class DispatcherServlet extends FrameworkServlet {
 	 * @param response current HTTP response
 	 * @throws Exception in case of any kind of processing failure
 	 */
-	/** ÖĞÑë¿ØÖÆÆ÷,¿ØÖÆÇëÇóµÄ×ª·¢ **/
+	/** ä¸­å¤®æ§åˆ¶å™¨,æ§åˆ¶è¯·æ±‚çš„è½¬å‘ **/
 	protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		HttpServletRequest processedRequest = request;
 		HandlerExecutionChain mappedHandler = null;
@@ -895,27 +895,27 @@ public class DispatcherServlet extends FrameworkServlet {
 			Exception dispatchException = null;
 
 			try {
-				//1.¼ì²éÊÇ·ñÊÇÎÄ¼şÉÏ´«µÄÇëÇó
+				//1.æ£€æŸ¥æ˜¯å¦æ˜¯æ–‡ä»¶ä¸Šä¼ çš„è¯·æ±‚
 				processedRequest = checkMultipart(request);
 				multipartRequestParsed = processedRequest != request;
 
 				// Determine handler for the current request.
-				// 2.È¡µÃ´¦Àíµ±Ç°ÇëÇóµÄcontroller,ÕâÀïÒ²³ÆÎªhanlder,´¦ÀíÆ÷,µÚÒ»¸ö²½ÖèµÄÒâÒå¾ÍÔÚÕâÀïÌåÏÖÁË.
-				//ÕâÀï²¢²»ÊÇÖ±½Ó·µ»Øcontroller,¶øÊÇ·µ»ØµÄHandlerExecutionChainÇëÇó´¦ÀíÆ÷Á´¶ÔÏó,
-				//¸Ã¶ÔÏó·â×°ÁËhandlerºÍinterceptors.
+				// 2.å–å¾—å¤„ç†å½“å‰è¯·æ±‚çš„controller,è¿™é‡Œä¹Ÿç§°ä¸ºhanlder,å¤„ç†å™¨,ç¬¬ä¸€ä¸ªæ­¥éª¤çš„æ„ä¹‰å°±åœ¨è¿™é‡Œä½“ç°äº†.
+				//è¿™é‡Œå¹¶ä¸æ˜¯ç›´æ¥è¿”å›controller,è€Œæ˜¯è¿”å›çš„HandlerExecutionChainè¯·æ±‚å¤„ç†å™¨é“¾å¯¹è±¡,
+				//è¯¥å¯¹è±¡å°è£…äº†handlerå’Œinterceptors.
 				mappedHandler = getHandler(processedRequest, false);
-				// Èç¹ûhandlerÎª¿Õ,Ôò·µ»Ø404
+				// å¦‚æœhandlerä¸ºç©º,åˆ™è¿”å›404
 				if (mappedHandler == null || mappedHandler.getHandler() == null) {
 					noHandlerFound(processedRequest, response);
 					return;
 				}
 
 				// Determine handler adapter for the current request.
-				//3. »ñÈ¡´¦ÀírequestµÄ´¦ÀíÆ÷ÊÊÅäÆ÷handler adapter 
+				//3. è·å–å¤„ç†requestçš„å¤„ç†å™¨é€‚é…å™¨handler adapter
 				HandlerAdapter ha = getHandlerAdapter(mappedHandler.getHandler());
 
 				// Process last-modified header, if supported by the handler.
-				// ´¦Àí last-modified ÇëÇóÍ·
+				// å¤„ç† last-modified è¯·æ±‚å¤´
 				String method = request.getMethod();
 				boolean isGet = "GET".equals(method);
 				if (isGet || "HEAD".equals(method)) {
@@ -930,14 +930,14 @@ public class DispatcherServlet extends FrameworkServlet {
 					}
 				}
 
-				// 4.À¹½ØÆ÷µÄÔ¤´¦Àí·½·¨
+				// 4.æ‹¦æˆªå™¨çš„é¢„å¤„ç†æ–¹æ³•
 				if (!mappedHandler.applyPreHandle(processedRequest, response)) {
 					return;
 				}
 
 				try {
 					// Actually invoke the handler.
-					// 5.Êµ¼ÊµÄ´¦ÀíÆ÷´¦ÀíÇëÇó,·µ»Ø½á¹ûÊÓÍ¼¶ÔÏó
+					// 5.å®é™…çš„å¤„ç†å™¨å¤„ç†è¯·æ±‚,è¿”å›ç»“æœè§†å›¾å¯¹è±¡
 					mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 				}
 				finally {
@@ -946,9 +946,9 @@ public class DispatcherServlet extends FrameworkServlet {
 					}
 				}
 
-				// ½á¹ûÊÓÍ¼¶ÔÏóµÄ´¦Àí
+				// ç»“æœè§†å›¾å¯¹è±¡çš„å¤„ç†
 				applyDefaultViewName(request, mv);
-				// 6.À¹½ØÆ÷µÄºó´¦Àí·½·¨
+				// 6.æ‹¦æˆªå™¨çš„åå¤„ç†æ–¹æ³•
 				mappedHandler.applyPostHandle(processedRequest, response, mv);
 			}
 			catch (Exception ex) {
@@ -957,7 +957,7 @@ public class DispatcherServlet extends FrameworkServlet {
 			processDispatchResult(processedRequest, response, mappedHandler, mv, dispatchException);
 		}
 		catch (Exception ex) {
-			// ÇëÇó³É¹¦ÏìÓ¦Ö®ºóµÄ·½·¨
+			// è¯·æ±‚æˆåŠŸå“åº”ä¹‹åçš„æ–¹æ³•
 			triggerAfterCompletion(processedRequest, response, mappedHandler, ex);
 		}
 		catch (Error err) {

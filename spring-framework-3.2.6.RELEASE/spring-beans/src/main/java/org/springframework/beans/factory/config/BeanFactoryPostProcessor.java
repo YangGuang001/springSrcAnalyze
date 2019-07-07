@@ -42,6 +42,8 @@ import org.springframework.beans.BeansException;
  * @see BeanPostProcessor
  * @see PropertyResourceConfigurer
  */
+// BeanDefinition 收集完成后，调用的接口，其应用有 PropertyResourceConfigurer，读取配置文件，
+// 其子接口 BeanDefinitionRegistryPostProcessor 调用，注入或者修改BeanDefinition 信息
 public interface BeanFactoryPostProcessor {
 
 	/**

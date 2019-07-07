@@ -161,6 +161,7 @@ public abstract class CacheAspectSupport implements InitializingBean {
 		Set<String> cacheNames = operation.getCacheNames();
 		Collection<Cache> caches = new ArrayList<Cache>(cacheNames.size());
 		for (String cacheName : cacheNames) {
+			//从cache manager 中找到对应的cache cacheName 为方法名，
 			Cache cache = this.cacheManager.getCache(cacheName);
 			if (cache == null) {
 				throw new IllegalArgumentException("Cannot find cache named '" + cacheName + "' for " + operation);
@@ -188,10 +189,13 @@ public abstract class CacheAspectSupport implements InitializingBean {
 		if (targetClass == null && target != null) {
 			targetClass = target.getClass();
 		}
+
 		Collection<CacheOperation> cacheOp = getCacheOperationSource().getCacheOperations(method, targetClass);
 
 		// analyze caching information
+		//如果没有拦截的注解，直接调用方法
 		if (!CollectionUtils.isEmpty(cacheOp)) {
+		    //CacheOperationContext 包装所有的CacheManager里面的所有操作
 			Map<String, Collection<CacheOperationContext>> ops = createOperationContext(cacheOp, method, args, target, targetClass);
 			// start with evictions
 			inspectBeforeCacheEvicts(ops.get(EVICT));

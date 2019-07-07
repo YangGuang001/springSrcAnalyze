@@ -39,6 +39,7 @@ import org.springframework.beans.BeansException;
  * @see ConfigurableBeanFactory#addBeanPostProcessor
  * @see BeanFactoryPostProcessor
  */
+//bean 实例化和属性注入之后，setBeanName和setBeanFactory之后，主要作用  返回一个新的Bean
 public interface BeanPostProcessor {
 
 	/**

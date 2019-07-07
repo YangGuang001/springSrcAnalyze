@@ -32,6 +32,7 @@ import org.springframework.util.Assert;
  * @author Rod Johnson
  */
 @SuppressWarnings("serial")
+//前置增强器
 public class MethodBeforeAdviceInterceptor implements MethodInterceptor, Serializable {
 
 	private MethodBeforeAdvice advice;

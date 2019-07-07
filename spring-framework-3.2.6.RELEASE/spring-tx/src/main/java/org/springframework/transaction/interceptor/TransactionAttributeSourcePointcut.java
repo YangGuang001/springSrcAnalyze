@@ -29,6 +29,10 @@ import org.springframework.util.ObjectUtils;
  * @author Juergen Hoeller
  * @since 2.5.5
  */
+
+/**
+ * 事物切面，通过在TransactionAttributeSource进行匹配事物注解或者xml配置
+ */
 @SuppressWarnings("serial")
 abstract class TransactionAttributeSourcePointcut extends StaticMethodMatcherPointcut implements Serializable {
 

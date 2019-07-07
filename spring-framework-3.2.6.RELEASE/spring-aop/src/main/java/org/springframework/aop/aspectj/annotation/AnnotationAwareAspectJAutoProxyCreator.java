@@ -46,6 +46,10 @@ import org.springframework.util.Assert;
  * @see org.springframework.aop.aspectj.annotation.AspectJAdvisorFactory
  */
 @SuppressWarnings("serial")
+/**
+ * 在Bean经过instantiation、beanNameAware，BeanFactoryAware、InitialBean、init-method之后，返回Bean
+ * 之前，调用InstantiationAwareBeanPostProcessor接口，根据Bean的类名和方法名进行匹配，如果配置中，返回代理类ProxyBean。
+ */
 public class AnnotationAwareAspectJAutoProxyCreator extends AspectJAwareAdvisorAutoProxyCreator {
 
 	private List<Pattern> includePatterns;

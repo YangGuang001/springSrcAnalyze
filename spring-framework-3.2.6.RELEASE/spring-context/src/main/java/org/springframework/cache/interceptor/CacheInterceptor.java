@@ -38,6 +38,10 @@ import org.aopalliance.intercept.MethodInvocation;
  * @author Juergen Hoeller
  * @since 3.1
  */
+
+/**
+ * spring cache 缓存拦截器，类似于aop，把CacheInterceptor注入到拦截器中。
+ */
 @SuppressWarnings("serial")
 public class CacheInterceptor extends CacheAspectSupport implements MethodInterceptor, Serializable {
 

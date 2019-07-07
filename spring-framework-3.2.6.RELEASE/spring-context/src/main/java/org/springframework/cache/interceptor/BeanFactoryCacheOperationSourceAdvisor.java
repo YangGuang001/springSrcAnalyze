@@ -27,6 +27,10 @@ import org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor;
  * @author Costin Leau
  * @since 3.1
  */
+
+/**
+ * 继承AbstractBeanFactoryPointcutAdvisor，实例化为Bean，在BeanPostProcessor的
+ */
 @SuppressWarnings("serial")
 public class BeanFactoryCacheOperationSourceAdvisor extends AbstractBeanFactoryPointcutAdvisor {
 

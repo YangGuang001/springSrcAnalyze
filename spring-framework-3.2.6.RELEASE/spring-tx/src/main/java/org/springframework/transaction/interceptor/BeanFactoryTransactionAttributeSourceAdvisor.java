@@ -30,6 +30,10 @@ import org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor;
  * @see TransactionInterceptor
  * @see TransactionAttributeSourceAdvisor
  */
+
+/**
+ * 数据库数据切面
+ */
 @SuppressWarnings("serial")
 public class BeanFactoryTransactionAttributeSourceAdvisor extends AbstractBeanFactoryPointcutAdvisor {
 

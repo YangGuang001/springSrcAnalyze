@@ -29,6 +29,7 @@ import org.springframework.aop.AfterAdvice;
  * @author Rod Johnson
  * @since 2.0
  */
+//后置增强器
 public class AspectJAfterAdvice extends AbstractAspectJAdvice implements MethodInterceptor, AfterAdvice {
 
 	public AspectJAfterAdvice(
