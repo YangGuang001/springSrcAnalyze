@@ -46,6 +46,11 @@ import org.springframework.core.type.AnnotationMetadata;
  * @see ImportSelector
  * @see Configuration
  */
+
+/**
+ * 注册类似Configuration类似的注解的BeanDefinition的定义
+ * BeanDefinition实现哪些接口信息由其继承实现
+ */
 public interface ImportBeanDefinitionRegistrar {
 
 	/**

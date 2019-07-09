@@ -32,6 +32,11 @@ import static org.springframework.context.annotation.MetadataUtils.*;
  * @see EnableAspectJAutoProxy
  * @since 3.1
  */
+
+/**
+ * 注入特别的BeanDefinition信息
+ * 类似有Configuration注入
+ */
 class AspectJAutoProxyRegistrar implements ImportBeanDefinitionRegistrar {
 
 	/**
